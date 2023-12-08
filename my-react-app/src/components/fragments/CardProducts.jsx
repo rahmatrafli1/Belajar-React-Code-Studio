@@ -5,7 +5,7 @@ const CardProducts = (props) => {
   // eslint-disable-next-line react/prop-types
   const { children } = props;
   return (
-    <div className="w-full max-w-sm bg-gray-800 border border-gray-700 rounded-lg shadow">
+    <div className="flex flex-col justify-between w-full max-w-sm bg-gray-800 border border-gray-700 rounded-lg shadow">
       {children}
     </div>
   );
@@ -25,7 +25,7 @@ const Body = (props) => {
   // eslint-disable-next-line react/prop-types
   const { children, title } = props;
   return (
-    <div className="px-5 pb-5">
+    <div className="h-full px-5 pb-5">
       <Link to="#">
         <h5 className="text-xl font-semibold tracking-tight text-white">
           {title}
