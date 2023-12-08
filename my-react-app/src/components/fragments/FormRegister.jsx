@@ -32,7 +32,13 @@ const FormRegister = () => {
         id="rpassword"
         placeholder="******"
       />
-      <Button type="button" variant="bg-green-800" text="Register" />
+      <Button
+        type="button"
+        variant="bg-green-800"
+        text="Register"
+        variant_ring_1="ring-green-800"
+        text_1="text-green-800"
+      />
     </form>
   );
 };

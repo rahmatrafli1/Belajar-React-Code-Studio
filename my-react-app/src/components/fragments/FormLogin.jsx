@@ -18,7 +18,13 @@ const FormLogin = () => {
         id="password"
         placeholder="******"
       />
-      <Button type="button" variant="bg-green-800" text="Login" />
+      <Button
+        type="button"
+        variant="bg-green-800"
+        text="Login"
+        variant_ring_1="ring-green-800"
+        text_1="text-green-800"
+      />
     </form>
   );
 };
