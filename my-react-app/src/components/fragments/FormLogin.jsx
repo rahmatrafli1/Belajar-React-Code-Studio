@@ -2,8 +2,14 @@ import Button from "../elements/Button";
 import InputForm from "../elements/input";
 
 const FormLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    localStorage.setItem("email", e.target.email.value);
+    localStorage.setItem("password", e.target.password.value);
+    window.location.href = "/products";
+  };
   return (
-    <form>
+    <form onSubmit={handleLogin}>
       <InputForm
         htmlFor="email"
         title="Email"
@@ -19,7 +25,7 @@ const FormLogin = () => {
         placeholder="******"
       />
       <Button
-        type="button"
+        type="submit"
         variant="bg-green-800"
         text="Login"
         variant_ring_1="ring-green-800"
