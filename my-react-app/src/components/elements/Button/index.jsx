@@ -29,7 +29,7 @@ const Button = (props) => {
     <button
       type={type}
       className={`${wfull} h-10 px-6 font-semibold rounded-md ${variant} ${text_non_hover} hover:${bg_hover} hover:${variant} hover:${variant_ring} hover:${variant_ring_1} hover:${text_1} transition duration-700 ease-in-out ${mb} ${ml}`}
-      onClick={() => onClick()}
+      onClick={onClick}
     >
       {text}
     </button>
