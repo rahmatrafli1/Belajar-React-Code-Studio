@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 
 class Counter extends React.Component {
@@ -6,7 +7,21 @@ class Counter extends React.Component {
     this.state = {
       count: 0,
     };
+    console.log("constructor");
   }
+
+  componentDidMount() {
+    this.setState({ count: 10 });
+    console.log("componentDidMount");
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("componentDidUpdate");
+    if (this.state.count === 10) {
+      this.setState({ count: 5 });
+    }
+  }
+
   render() {
     return (
       <div className="flex items-center mb-3">
@@ -27,6 +42,7 @@ class Counter extends React.Component {
         >
           Reset
         </button>
+        {console.log("render")}
       </div>
     );
   }
